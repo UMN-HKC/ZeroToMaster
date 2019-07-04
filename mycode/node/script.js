@@ -1,4 +1,10 @@
-const a = 4;
-const b = 5;
+const fs = require('fs');
 
-console.log(a + b);
+fs.readFile('./hello.txt', (err, data) => {
+  if (err) {
+    console.log('errrooor');
+  }
+  else {
+    console.log(data.toString());
+  }
+})
